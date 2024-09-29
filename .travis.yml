@@ -1,8 +1,7 @@
 language: node_js
 node_js:
-  - "14"  # Specify the Node.js version
+  - "18"  # Use a compatible Node.js version
 install:
-  - npm install -g npm@latest  # Ensure npm is updated
   - npm install  # Install project dependencies
 script:
   - npm run build  # Adjust according to your build command
