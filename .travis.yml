@@ -1,18 +1,15 @@
-
 language: node_js
 node_js:
-  - "stable"  # You can specify a specific version, e.g., "14" or "16"
-
-# Install dependencies and build the project
+  - "14"  # Specify the Node.js version
 install:
-  - npm install  # Install dependencies
-  - npm run build  # Assuming you have a build script defined in package.json
-
-# Deployment configuration
+  - npm install -g npm@latest  # Ensure npm is updated
+  - npm install  # Install project dependencies
+script:
+  - npm run build  # Adjust according to your build command
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Make sure this token is set in your Travis CI settings
-  local_dir: build  # Ensure your build directory is correct
+  github_token: $GITHUB_TOKEN
+  local_dir: build
   on:
-    branch: main  # Deploy only from the main branch
+    branch: main
