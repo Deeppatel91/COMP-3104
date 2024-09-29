@@ -1,14 +1,17 @@
 language: node_js
 node_js:
   - "stable"
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $Github_token
-  local_dir: build
-  on:
-    branch: main
 
 
 script:
   - echo "Starting build..."
+  - npm install
+  - npm test
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  
+  local_dir: build
+  on:
+    branch: main
