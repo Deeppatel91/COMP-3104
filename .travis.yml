@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "18"  # Use a compatible Node.js version
+  - "14"  # Use a stable version of Node.js that is compatible
+cache:
+  directories:
+    - node_modules
 install:
   - npm install  # Install project dependencies
 script:
