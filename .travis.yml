@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-  - "14"  # Use a stable version of Node.js
+  - "14"  
 cache:
   directories:
     - node_modules
 install:
-  - npm install  # Install project dependencies
+  - npm install 
 script:
-  - npm run build  # Run the build script defined in package.json
+  - npm run build  
 deploy:
   provider: pages
   skip_cleanup: true
