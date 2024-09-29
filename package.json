@@ -1,12 +1,15 @@
 {
-  "name": "git",
+  "name": "git",                  
   "version": "1.0.0",
-  "description": "",
+  "description": "Your project description", 
   "main": "index.js",
   "scripts": {
+    "build": "your-build-command",  
     "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "",                   
+  "license": "ISC",
+  "dependencies": {
+  }
 }
