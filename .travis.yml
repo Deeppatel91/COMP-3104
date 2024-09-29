@@ -1,17 +1,10 @@
 language: node_js
 node_js:
-  - "14"  # Use a stable version of Node.js
-cache:
-  directories:
-    - node_modules  # Cache node_modules for faster builds
-install:
-  - npm install  # Install project dependencies
-script:
-  - npm run build  # Run the build script defined in package.json
+  - "stable"
 deploy:
   provider: pages
-  skip_cleanup: true  # Skip cleanup to preserve the build directory
-  github_token: $GITHUB_TOKEN  # Token for authentication
-  local_dir: build  # Directory to deploy
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
   on:
-    branch: main  # Deploy only on the main branch
+    branch: main
